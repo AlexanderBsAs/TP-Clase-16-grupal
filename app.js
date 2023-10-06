@@ -14,19 +14,19 @@ app.get("/berners-lee",(req,res)=>
 {let resolve=path.resolve(__dirname,"./views/berners-lee.html")
 res.sendFile(resolve)} )
 app.get("/clarke",(req,res)=>
-{let resolve=path.resolve(__dirname,"./clarke.html")
+{let resolve=path.resolve(__dirname,"./views/clarke.html")
 res.sendFile(resolve)} )
 app.get("/hamilton",(req,res)=>
-{let resolve=path.resolve(__dirname,"./hamilton.html")
+{let resolve=path.resolve(__dirname,"./views/hamilton.html")
 res.sendFile(resolve)} )
 app.get("/hopper",(req,res)=>
-{let resolve=path.resolve(__dirname,"./hopper.html")
+{let resolve=path.resolve(__dirname,"./views/hopper.html")
 res.sendFile(resolve)} )
 app.get("/lovelace",(req,res)=>
-{let resolve=path.resolve(__dirname,"./lovelace.html")
+{let resolve=path.resolve(__dirname,"./views/lovelace.html")
 res.sendFile(resolve) })
 app.get("/turing",(req,res)=>
-{let resolve=path.resolve(__dirname,"./turing.html")
+{let resolve=path.resolve(__dirname,"./views/turing.html")
 res.sendFile(resolve)} )
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname,"public")));
